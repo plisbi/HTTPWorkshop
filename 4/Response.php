@@ -23,6 +23,9 @@ class Response
      */
     protected $statusCode;
 
+    /**
+    *
+    **/
     public function send ($content = '', int $statusCode = 200, array $headers = [], $protocolVersion = '1.0'){
       //send header
       header(sprintf('HTTP/%s %s %s', $protocolVersion, $statusCode, $this->statusText), true, $statusCode);
@@ -42,8 +45,8 @@ class Response
 
     public function setStatusCode(int $statusCode)
     {
-      if (null !== $statusCode && !\is_int($content)) {
-          throw new \UnexpectedValueException(sprintf('The Response content must be a int, "%s" given.', \gettype($content)));
+      if (null !== $statusCode && !\is_int($statusCode)) {
+          throw new \UnexpectedValueException(sprintf('The Response content must be a int, "%s" given.', \gettype($statusCode)));
       }
       $this->statusCode = (int)$statusCode;
 
@@ -52,8 +55,8 @@ class Response
 
     public function setHeaders(array $headers)
     {
-      if (null !== $headers && !\is_array($content)) {
-          throw new \UnexpectedValueException(sprintf('The Response content must be a array, "%s" given.', \gettype($content)));
+      if (null !== $headers && !\is_array($headers)) {
+          throw new \UnexpectedValueException(sprintf('The Response content must be a array, "%s" given.', \gettype($headers)));
       }
       $this->headers = $headers;
 

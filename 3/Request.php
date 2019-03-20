@@ -1,5 +1,4 @@
 <?php
-
 class Request
 {
   /**
@@ -17,10 +16,12 @@ class Request
 
   public function getByKey($key, $default = null)
   {
-      if (array_key_exists($key, $this->query)) {
-          return $_GET[$key];
-      }
+    // check if the key exist
+    if (array_key_exists($key, $this->query)) {
 
-      return $default;
+      return htmlspecialchars($_GET[$key], ENT_QUOTES, 'UTF-8');
+    }
+
+    return $default;
   }
 }
