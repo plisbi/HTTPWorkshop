@@ -9,5 +9,3 @@ if ($name) {
     printf('Hello %s', $name);
 }
 
-$server = $_SERVER;
-dump($server);
