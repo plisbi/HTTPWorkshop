@@ -6,11 +6,20 @@ namespace Workshop;
 
 class Request
 {
+    /**
+     * @var array
+     */
     public $query;
+
+    /**
+     * @var Server
+     */
+    public $server;
 
     public function __construct()
     {
         $this->query = $_GET;
+        $this->server = new Server($_SERVER);
     }
 
     public function getByKey($key, $default = null): ?string

@@ -51,6 +51,7 @@ class Response
         );
 
         echo $this->content;
+        exit;
     }
 
     public function setContent(string $content): void
