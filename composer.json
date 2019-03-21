@@ -2,6 +2,11 @@
     "name": "workshop/http",
     "type": "project",
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Workshop\\": "src/"
+        }
+    },
     "require": {
     }
 }
