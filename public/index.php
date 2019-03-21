@@ -10,10 +10,7 @@ use Workshop\Response;
 $routes = require __DIR__ . '/../app/routes.php';
 $request = new Request();
 
-$path = $request->server->getPathInfo();
-if (0 === strpos($path, '/index.php')) {
-    $path = substr($path, strlen('/index.php'));
-}
+$path = rtrim($request->server->getPathInfo(), '/');
 
 $routeMatchFile = null;
 foreach ($routes as $route) {
@@ -27,11 +24,10 @@ $response = new Response();
 if (!$routeMatchFile) {
     $response->setStatusCode(404);
     $response->setContent('Not found');
-    $response->send();
+} else {
+    ob_start();
+    include $routeMatchFile;
+    $response->setContent(ob_get_clean());
 }
 
-ob_start();
-include $routeMatchFile;
-
-$response->setContent(ob_get_clean());
 $response->send();
