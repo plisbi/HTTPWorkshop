@@ -1,0 +1,7 @@
+{
+    "name": "workshop/http",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+    }
+}
