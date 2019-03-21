@@ -1,0 +1,8 @@
+{
+    "name": "workshop/http",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "symfony/var-dumper": "^4.2"
+    }
+}
