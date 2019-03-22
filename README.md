@@ -2,8 +2,8 @@ Workshop
 ========
 
 ### Exercise 1
-
-You will be creating a open source application, so the aim of this exercise is create a simple endpoint that might or not receive a parameter from the URL.
+You will be creating a open source application.
+The aim of this exercise is create a simple endpoint that might or not receive a parameter from the URL, without using any library.
 
 ### Exercise 2
 Secure the make object oriented
