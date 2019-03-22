@@ -14,4 +14,5 @@ $name = $request->getByKey('name', 'anonymous');
 $content = sprintf('Hello %s', $name);
 
 $response->setContent($content);
+$response->setStatusCode(200);
 $response->send();

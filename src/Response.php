@@ -62,9 +62,4 @@ class Response
     {
         $this->statusCode = $statusCode;
     }
-
-    public function setHeaders(array $headers): void
-    {
-        $this->headers = $headers;
-    }
 }
