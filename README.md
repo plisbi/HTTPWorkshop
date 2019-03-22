@@ -9,7 +9,7 @@ The aim of this exercise is create a simple endpoint that might or not receive a
 Make it object oriented, and secure the output XSS
 
 ### Exercise 3
-Do a response that accept 404 and 200 
+Do a response that returns 404 and 200 
 
 ### Exercise 4
 Yo need to accept two routes /hello and /goodbye
